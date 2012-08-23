@@ -1,0 +1,163 @@
+class Cine{
+	    public static void main(String [] args ){
+
+		int opcion;
+		int op=0;
+		int boletas=0;
+		int valorb;
+		int vabo;
+		int To=0;
+		int TO=0;
+		int gafas;
+		int Gafas;
+		int paga=0;
+		int numgaf=0;		
+		int vtga;
+	
+	
+		System.out.println("                   !!BIENVENIDO A CRIS CINE!! ");
+		System.out.println("");                   
+		System.out.println("");  
+		System.out.println("                   PARA USTED FUNCIONES EN 2D Y 3D");	
+		System.out.println("CINE 2D");   
+		System.out.println("GENERAL...................$8000 ");   
+		System.out.println("PREFERENCIAL..............$11000");   
+		System.out.println(""); 
+		System.out.println("CINE 3D"); 
+		System.out.println("GENERAL...................$12000"); 
+		System.out.println("PREFERENCIAL..............$15000"); 
+		System.out.println("");
+		System.out.println("GAFAS 3D");    
+		System.out.println("UNIDAD....................$3000");
+		System.out.println("");
+		System.out.println("CINE 2D(1) / CINE 3D(2)");
+			 
+			 
+		opcion= Integer.parseInt(System.console().readLine());	
+		if (opcion==1)
+		{
+			System.out.println("CINE 2D ");
+			System.out.println("GENERAL(1) / PREFERENCIAL(2)");
+			op= Integer.parseInt(System.console().readLine());
+				
+		    if (op==1)
+			{
+				System.out.println("CINE 2D....GENERAL");
+			}
+			
+			else if (op==2) 
+			{
+				System.out.println("CINE 2D....PREFERENCIAL");
+			}
+				
+			System.out.println("");
+			System.out.println("Digite Numero de boletas");
+			boletas= Integer.parseInt(System.console().readLine());		
+			
+			if (op==1) 
+			{
+				valorb=8000;
+				To=valorb*boletas;
+				System.out.println("");
+				System.out.println("Total a pagar ");
+				System.out.println(To);	
+			}
+					
+			else if (op==2) 
+			{
+				vabo=11000;
+				TO=vabo*boletas;
+				System.out.println("Total a pagar  "); 
+				System.out.println(TO); 
+			}
+					
+		}  
+				
+		if (opcion==2) 
+		{
+			System.out.println("CINE 3D");  
+			System.out.println("General (3) /  Preferencial  (4)"); 	
+			op= Integer.parseInt(System.console().readLine());
+				
+			if (op==3) 
+			{
+				System.out.println("CINE 3D......GENERAL");  	
+			}
+					
+			else if (op==4) 
+			{
+				System.out.println("CINE 3D......PREFERENCIAL"); 		
+			}
+				System.out.println("Numero de boletas");	
+				boletas= Integer.parseInt(System.console().readLine());
+					   
+			if (op==3) 
+			{
+				valorb=12000;
+				To=valorb*boletas;
+			}
+					
+			else if (op==4) 
+			{
+				vabo=15000;
+				TO=vabo*boletas;
+			}
+					
+				System.out.println("Numero de gafas");
+				numgaf= Integer.parseInt(System.console().readLine());		
+			if (op==3)
+			{
+					
+				if (numgaf<=boletas)
+				{
+					gafas=3000;
+					vtga=numgaf*gafas;	
+					paga=To+vtga;
+					System.out.println("");
+					System.out.println("costo a pagar  sin gafas");
+					System.out.println(To);
+					System.out.println("");
+					System.out.println("total a pagar  ");
+					System.out.println(paga);		
+				}
+					   
+				else if(numgaf>boletas)
+				{
+				    System.out.println("venta de gafas no permitida");	
+				}
+				   
+			}
+					
+			if(op==4) 
+			{
+				
+				if (numgaf<=boletas)
+				{
+					Gafas=3000;                
+					vtga=numgaf*Gafas;
+					paga=TO+vtga;
+					System.out.println("");
+					System.out.println("costo a pagar  sin gafas");
+					System.out.println(TO);
+					System.out.println("");
+					System.out.println("Total a pagar");	
+					System.out.println(paga);	
+				}
+				
+				else if(numgaf>boletas)
+				{    
+					 System.out.println("venta de gafas no permitida");                
+				}
+						
+			}
+										
+		}
+				
+			System.out.println("");
+			System.out.println("            GRACIAS POR SU COMPRA"); 
+			System.out.println("      VUELVA PRONTO !!CRIS CINE LO ESPERA!!  "); 	  
+			
+ 	    }
+	}
+
+	

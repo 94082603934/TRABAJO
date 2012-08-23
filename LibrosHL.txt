@@ -1,0 +1,16 @@
+class LibroHL{
+	String prestadoa;	
+	String facultad;
+	boolean genero;
+	String diaentrega;
+	String diadevolucion;
+	
+    LibroHL( String prestadoa,String facultad, boolean genero, String diaentrega ,String diadevolucion ){
+	    this.prestadoa = prestadoa;
+        this.facultad = facultad;
+        this.genero = genero;
+		this.diaentrega = diaentrega;
+        this.diadevolucion = diadevolucion;
+	
+	}
+} 

@@ -1,0 +1,49 @@
+class Biblioteca{
+	String editorial;
+	String autor;
+	String tema;
+	String color;
+	String zona;
+	LibroHL [] historiaLibros;
+
+	
+	
+	Biblioteca( String _editorial, 
+				String _autor,
+				String _tema,
+				String _color,
+				String _zona, 
+				LibroHL [] _historiaLibros){
+		editorial= _editorial;
+		autor= _autor;
+		tema= _tema;
+		color= _color;
+		zona= _zona;
+		historiaLibros= _historiaLibros;
+	
+    }
+
+	void imprimirHistoria(){
+        System.out.println("HISTORIA LIBROS");
+        System.out.println(editorial + autor);
+        for(int i=0; i<historiaLibros.length; i++){
+           LibroHL temporal = historiaLibros[i];
+           System.out.println(temporal.prestadoa + temporal.facultad + temporal.genero + temporal.diaentrega + temporal.diadevolucion);
+        }
+    }
+	
+	public static void main ( String[] args) {
+	LibroHL[] libros= new LibroHL[5];
+	libros[0] = new LibroHL  ( "prestadoa:Daniel",	"facultad:psicologia", 	 true , "diaentrega:22/08/12", 	" diadevolucion:27/08/12");
+	libros[1] = new LibroHL  ( "prestadoa:Eric Campbell","facultad:suspenso",true,"diaentrega: 11/08/12"," diadevolucion: 16/08/12");
+	libros[2] = new LibroHL  ( "prestadoa:camilo pino","facultad:estudiantil",true ,"diaentrega: 05/07/12"," diadevolucion: 11/07/12");
+	libros[3] = new LibroHL  ( "prestadoa:Juana rulfo","facultad:poesia",false ,"diaentrega: 22/06/12"," diadevolucion: 25/06/12");
+	libros[4] = new LibroHL  ( "prestadoa:leidy porras","facultad:psicologico",false ,"diaentrega: 09/05/12"," diadevolucion: 13/05/12");
+	
+	Biblioteca amar = new Biblioteca ("editorial:norma", "autor:walter riso","tema:sentimental ", "color:crema", "zona:b", libros); 
+	 System.out.println("		BIENVENIDO A CRIS BIBLIOTECA");
+	 amar.imprimirHistoria();
+		}	
+	}
+	
+	
